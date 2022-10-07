@@ -8,7 +8,7 @@ fetchCocktails('a')
     .then(cardBuilder)
     .catch(error => {console.log(error);});
 
-function cardBuilder(cocktail) {
+ function cardBuilder(cocktail) {
     const markup = cocktail.drinks.map(
         ({ strDrinkThumb, strDrink }) =>
             `<div>
@@ -18,5 +18,5 @@ function cardBuilder(cocktail) {
                 <button type='button'>Add to ♡</button>
             </div>`
     );
-    gallery.innerHTML = markup.join('')
+     gallery.innerHTML = markup.join('')
 }
