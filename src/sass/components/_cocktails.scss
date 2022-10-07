@@ -1,0 +1,133 @@
+.cocktails__title {
+  margin-bottom: 60px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.31;
+  text-align: center;
+
+  @media screen and (min-width: $min768) {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.91;
+  }
+
+  @media screen and (min-width: $min1200) {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+.cocktails__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 32px;
+}
+
+.cocktails__item {
+  width: 100%;
+  border: 1px solid #fd5103;
+  border-radius: 4px;
+
+  & + .cocktails__item {
+    @media screen and (max-width: $max768) {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: $min768) {
+    width: calc((100% - 64px) / 2);
+  }
+
+  @media screen and (min-width: $min1200) {
+    width: calc((100% - 96px) / 3);
+  }
+}
+
+.cocktails__img {
+  display: flex;
+
+  width: 100%;
+}
+
+.cocktails--box {
+  padding-top: 48px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $min768) {
+    padding: 20px;
+  }
+
+  // @media screen and (min-width: $min1200) {
+  // }
+}
+
+.cocktails__title--secondary {
+  margin-bottom: 16px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+
+  @media screen and (min-width: $min768) {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  @media screen and (min-width: $min1200) {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.19;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.cocktails__btn {
+  min-width: 108px;
+
+  padding: 7px 16px;
+  border-radius: 4px;
+
+  font-family: 'Roboto', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  align-items: center;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: $min768) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.cocktails__btn--first {
+  margin-right: 20px;
+
+  @media screen and (min-width: $min768) {
+    margin-right: 12px;
+  }
+
+  @media screen and (min-width: $min1200) {
+    margin-right: 16px;
+  }
+}
+
+.cocktails__svg {
+  margin: 2px 5px;
+
+  fill: $white-color;
+
+  &:checked {
+    fill: $button-orange-bgc;
+  }
+}
