@@ -123,11 +123,13 @@
 }
 
 .cocktails__svg {
-  margin: 2px 5px;
-
   fill: $white-color;
 
   &:checked {
     fill: $button-orange-bgc;
+  }
+
+  @media screen and (min-width: $min768) {
+    margin: 2px 5px;
   }
 }
