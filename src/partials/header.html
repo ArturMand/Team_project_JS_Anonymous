@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
-    <nav class="header__nav">
-      <a class="link header__link" href="#">
+    <div class="header__box">
+      <a class="link header__link" href="./index.html">
         <picture>
           <source
             srcset="
@@ -37,35 +37,62 @@
           />
         </picture>
       </a>
-      <a class="link header__link" href="#">Home</a>
-      <a class="link header__link" href="#">Favorite</a>
 
-      <!-- <label for="header-favorite-choice" class="header__link">Favorite</label>
-      <input
-        list="header-favorite"
-        id="header-favorite-choice"
-        name="header-favorite-choice"
-      />
+      <div
+        class="mobile-menu__container js-menu-container"
+        id="mobile-menu__container"
+      >
+        <form class="header__form">
+          <label class="header__label" for="form__search">
+            <svg class="icon-search" width="19" height="19">
+              <use href="./image/sprite.svg#icon-search"></use>
+            </svg>
+          </label>
+          <input
+            class="header__input"
+            id="form__search"
+            type="text"
+            name="search-favorite-list"
+            placeholder="Search"
+          />
+        </form>
 
-      <datalist id="header-favorite">
-        <option value="favorite cocktails"></option>
-        <a class="link" href="./favorite.html">Favorite cocktails</a>
-        <option value="favorite ingredients"></option>
-        <a class="link" href="./favorite.html">Favorite ingredients</a>
-      </datalist> -->
+        <nav class="header__nav">
+          <a class="link header__link" href="./index.html">Home</a>
+          <button class="header__button header__link" href="#">Favorite</button>
 
-      <form class="header__form">
-        <label class="header__form">
-          <svg class="icon-search" width="19" height="19">
-            <use href="./image/sprite.svg#icon-search"></use>
-          </svg>
-          <input type="text" name="search-favorite-list" placeholder="Search" />
-        </label>
-      </form>
+          <!-- <div class="header__list">
+            <a class="link header__favorite--link" href="./favorite.html"
+              >Favorite cocktails</a
+            >
+            <a class="link header__favorite--link" href="./favorite.html"
+              >Favorite ingredients</a
+            >
+          </div> -->
+        </nav>
+      </div>
 
-      <svg class="icon__menu" width="30" height="16">
-        <use href="./image/sprite.svg#icon-menu"></use>
-      </svg>
-    </nav>
+      <button
+        class="menu__btn js-open-menu js-close-menu"
+        aria-controls="mobile-menu__container"
+      >
+        <svg
+          class="icon__menu--open"
+          width="30"
+          height="16"
+          aria-label="Open mobile menu"
+        >
+          <use href="./image/sprite.svg#icon-menu"></use>
+        </svg>
+        <svg
+          class="icon__menu--close"
+          width="32"
+          height="32"
+          aria-label="Open mobile menu"
+        >
+          <use href="./image/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
