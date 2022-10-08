@@ -1,0 +1,36 @@
+.favorite__text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  color: $secondary-color-text;
+
+  @media screen and (min-width: $min768) {
+    font-size: 16px;
+  }
+}
+
+.favorite__box {
+  padding: 20px;
+
+  @media screen and (min-width: $min1200) {
+    padding: 28px;
+  }
+}
+
+.favorite__title--secondary {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $min768) {
+    padding: 28px;
+  }
+}
+
+.favorite__text {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $min768) {
+    padding: 28px;
+  }
+}
