@@ -1,10 +1,71 @@
-<header>
+<header class="header">
   <div class="container">
-    <a class="link header__link" href="#">cocktails</a>
-    <a href="#">Home</a>
-    <a href="./favorite.html">Favorite</a>
-    <svg class="icon__menu" width="30" height="16">
-      <use href="./image/sprite.svg#icon-menu"></use>
-    </svg>
+    <nav class="header__nav">
+      <a class="link header__link" href="#">
+        <picture>
+          <source
+            srcset="
+              ./image/logo-mobile@1x.png 1x,
+              ./image/logo-mobile@2x.png 2x,
+              ./image/logo-mobile@3x.png 3x
+            "
+            media="(max-width:767px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./image/logo-tablet@1x.png 1x,
+              ./image/logo-tablet@2x.png 2x,
+              ./image/logo-tablet@3x.png 3x
+            "
+            media="(min-width:768px) and (max-width:1199px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./image/logo-desktop@1x.png 1x,
+              ./image/logo-desktop@2x.png 2x,
+              ./image/logo-desktop@3x.png 3x
+            "
+            media="(min-width:1200px)"
+            type="image/png"
+          />
+          <img
+            class="header__logo"
+            src="./image/logo-mobile@1x.png"
+            alt="logo"
+          />
+        </picture>
+      </a>
+      <a class="link header__link" href="#">Home</a>
+      <a class="link header__link" href="#">Favorite</a>
+
+      <!-- <label for="header-favorite-choice" class="header__link">Favorite</label>
+      <input
+        list="header-favorite"
+        id="header-favorite-choice"
+        name="header-favorite-choice"
+      />
+
+      <datalist id="header-favorite">
+        <option value="favorite cocktails"></option>
+        <a class="link" href="./favorite.html">Favorite cocktails</a>
+        <option value="favorite ingredients"></option>
+        <a class="link" href="./favorite.html">Favorite ingredients</a>
+      </datalist> -->
+
+      <form class="header__form">
+        <label class="header__form">
+          <svg class="icon-search" width="19" height="19">
+            <use href="./image/sprite.svg#icon-search"></use>
+          </svg>
+          <input type="text" name="search-favorite-list" placeholder="Search" />
+        </label>
+      </form>
+
+      <svg class="icon__menu" width="30" height="16">
+        <use href="./image/sprite.svg#icon-menu"></use>
+      </svg>
+    </nav>
   </div>
 </header>
