@@ -14,6 +14,16 @@ button {
   border: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .container {
   width: $min320;
   padding-left: 20px;
@@ -92,7 +102,7 @@ button {
 
 .btn--white {
   display: flex;
-  
+
   border: 2px solid $button-orange-bgc;
   border-radius: 4px;
 
