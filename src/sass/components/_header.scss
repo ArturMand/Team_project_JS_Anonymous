@@ -1,0 +1,177 @@
+.header__box {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.header__link {
+  @media screen and (min-width: $min768) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $min1200) {
+    margin-left: 43px;
+  }
+}
+
+// form
+
+.header__form {
+  display: flex;
+
+  max-width: 288px;
+
+  padding: 8px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+  margin-top: 37px;
+  margin-bottom: 40px;
+}
+
+.header__label {
+  padding-right: 8px;
+  border-right: 1px solid $button-orange-bgc;
+  margin-right: 8px;
+}
+
+.header__input {
+  width: 100%;
+
+  border: 0;
+}
+
+// Navigation
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $min1200) {
+    align-items: center;
+    flex-direction: row;
+
+    margin-right: 251px;
+  }
+}
+
+.header__link {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  color: $main-color;
+
+  @media screen and (min-width: $min1200) {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+.header__button {
+  width: 116px;
+
+  margin-top: 32px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $min1200) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 60px;
+    margin-right: 43px;
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-direction: column;
+
+  width: 214px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+}
+
+.header__favorite--link {
+  display: inline-block;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.02em;
+
+  color: $main-color;
+
+  &:focus,
+  &:hover {
+    background-color: $button-orange-bgc;
+    color: $white-color;
+  }
+}
+
+// Mobile menu
+
+.menu__btn {
+  width: 32px;
+  height: 32px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+  z-index: 3;
+
+  @media screen and (min-width: $min1200) {
+    display: none;
+  }
+}
+
+.icon__menu--close {
+  display: none;
+}
+
+.js-menu-container {
+  &.is-open ~ .menu__btn {
+    & .icon__menu--close {
+      display: block;
+    }
+
+    & .icon__menu--open {
+      display: none;
+    }
+  }
+
+  & .icon__menu--close {
+    display: block;
+  }
+}
+
+.mobile-menu__container {
+  display: flex;
+  z-index: 2;
+
+  @media screen and (max-width: $max768) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    padding: 22px 20px;
+    background-color: $white-color;
+  }
+
+  &.is-open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $min1200) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
