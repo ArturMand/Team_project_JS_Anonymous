@@ -18,11 +18,26 @@ export function fetchCocktails(letter) {
  export function getRandomCocktail() {
     try {
       let arr = [];
-      for (let i = 0; i < 9; i += 1) {
+      if (window.screen.width < 768) {
+        for (let i = 0; i < 3; i += 1) {
           const cocktail = axios.get(`${URL}random.php`)
               .then(response => { return response.data });;
           arr.push(cocktail);
           
+      }
+      } else if (window.screen.width > 768 && window.screen.width < 1280) {
+        for (let i = 0; i < 6; i += 1) {
+          const cocktail = axios.get(`${URL}random.php`)
+              .then(response => { return response.data });;
+          arr.push(cocktail);
+          
+      }
+      } else {
+        for (let i = 0; i < 9; i += 1) {
+          const cocktail = axios.get(`${URL}random.php`)
+              .then(response => { return response.data });;
+          arr.push(cocktail);      
+        }     
       }
         const promiseArr = Promise.all(arr)
             .then(response => { return response });

@@ -1,14 +1,15 @@
-import { fetchCocktails, getRandomCocktail } from "./js/cocktailsAPI";
+// import { fetchCocktails, getRandomCocktail } from "./js/cocktailsAPI";
 
 
-const gallery = document.querySelector('body');
+// const gallery = document.querySelector('body');
+const gallery = document.querySelector('.list .cocktails__list');
 
 
-fetchCocktails('2')
-    .then(cardBuilder)
-    .catch(error => {console.log(error);});
+// fetchCocktails('2')
+//     .then(cardBuilder)
+//     .catch(error => {console.log(error);});
 
-function cardBuilder(cocktail) {
+export function cardBuilder(cocktail) {
     console.log(cocktail);
     const markup = cocktail.drinks.map(
         ({ strDrinkThumb, strDrink }) =>
@@ -31,17 +32,17 @@ function cardBuilder(cocktail) {
       </li>`
         
     );
-    gallery.innerHTML = markup.join('')
+  gallery.innerHTML = markup.join('')
 }
 
 
   
-getRandomCocktail()
-    .then(randomCardBuilder)
-    .catch(error => { console.log(error); })
+// getRandomCocktail()
+//     .then(randomCardBuilder)
+//     .catch(error => { console.log(error); })
     
 
-function randomCardBuilder(cocktail) {
+export function randomCardBuilder(cocktail) {
     console.log(cocktail);
     for (const e of cocktail) {
         const markup = e.drinks.map(
@@ -64,7 +65,7 @@ function randomCardBuilder(cocktail) {
         </div>
       </li>`
         );
-        gallery.insertAdjacentHTML('beforeend', markup.join(''))
+    gallery.insertAdjacentHTML('beforeend', markup.join(''))
     }
 
 }
