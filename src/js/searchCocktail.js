@@ -1,13 +1,21 @@
-import { fetchCocktails} from "./cocktailsAPI";
+import { getCocktailsByLetter, getCocktailByWord} from "./cocktailsAPI";
 import { cardBuilder} from "./cocktailCard";
 
 
-const searchForm = document.querySelector('#form__search');
 
-searchForm.addEventListener('input', findCocktailBySearch)
 
 export function findCocktailBySearch(e) {
-    fetchCocktails(e.target.value.trim().toLowerCase())
-    .then(cardBuilder)
-    .catch(error => { console.log(error); });
+    console.dir(e.target.value.length);
+
+    if (e.target.value.length === 1) {
+        getCocktailsByLetter(e.target.value.trim().toLowerCase())
+            .then(cardBuilder)
+            .catch(error => { console.log(error); })
+    } else {
+        getCocktailByWord(e.target.value.trim().toLowerCase())
+        .then(cardBuilder)
+        .catch(error => { console.log(error); })
+    };
 }
+
+

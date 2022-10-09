@@ -10,7 +10,7 @@ const gallery = document.querySelector('.cocktails__list');
 //     .catch(error => {console.log(error);});
 
 export function cardBuilder(cocktail) {
-    console.log(cocktail);
+    // console.log(cocktail);
     const markup = cocktail.drinks.map(
         ({ strDrinkThumb, strDrink }) =>
         `<li class="cocktails__item">
