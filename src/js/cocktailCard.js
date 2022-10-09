@@ -2,7 +2,7 @@
 
 
 // const gallery = document.querySelector('body');
-const gallery = document.querySelector('.list .cocktails__list');
+const gallery = document.querySelector('.cocktails__list');
 
 
 // fetchCocktails('2')
@@ -43,7 +43,7 @@ export function cardBuilder(cocktail) {
     
 
 export function randomCardBuilder(cocktail) {
-    console.log(cocktail);
+    // console.log(cocktail);
     for (const e of cocktail) {
         const markup = e.drinks.map(
         ({ strDrinkThumb, strDrink }) =>
@@ -65,7 +65,7 @@ export function randomCardBuilder(cocktail) {
         </div>
       </li>`
         );
-    gallery.insertAdjacentHTML('beforeend', markup.join(''))
+    gallery.insertAdjacentHTML('afterbegin', markup.join(''))
     }
 
 }
