@@ -3,7 +3,7 @@ const URL = 'https://thecocktaildb.com/api/json/v1/1/'
 
 
 
-export function fetchCocktails(letter) {
+export function getCocktailsByLetter(letter) {
   try {
         return axios.get(
             `${URL}search.php?f=${letter}`
@@ -14,8 +14,19 @@ export function fetchCocktails(letter) {
   }
 }
 
+export function getCocktailByWord(word) {
+  try {
+        return axios.get(
+            `${URL}search.php?s=${word}`
+            ).then(response => { return response.data })
+    
+  } catch (error) {
+    console.error(error);
+  }
+}
 
- export function getRandomCocktail() {
+
+export function getRandomCocktail() {
     try {
       let arr = [];
       if (window.screen.width < 768) {
