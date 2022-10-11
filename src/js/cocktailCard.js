@@ -1,8 +1,4 @@
-// import { fetchCocktails, getRandomCocktail } from "./js/cocktailsAPI";
-
-
-// const gallery = document.querySelector('body');
-const gallery = document.querySelector('.cocktails__list');
+import { refs } from './selectorRefs';
 
 
 // fetchCocktails('2')
@@ -23,7 +19,7 @@ export function cardBuilder(cocktail) {
             </button>
             <button class="btn--white cocktails__btn">
               Add to
-              <svg class="cocktails__svg" width="22" height="19">
+              <svg class="cocktails__svg" width=22 height=19>
                 <use href="./image/sprite.svg#icon-heart"></use>
               </svg>
             </button>
@@ -32,7 +28,7 @@ export function cardBuilder(cocktail) {
       </li>`
         
     );
-  gallery.innerHTML = markup.join('')
+  refs.gallery.innerHTML = markup.join('')
 }
 
 
@@ -65,7 +61,7 @@ export function randomCardBuilder(cocktail) {
         </div>
       </li>`
         );
-    gallery.insertAdjacentHTML('afterbegin', markup.join(''))
+    refs.gallery.insertAdjacentHTML('afterbegin', markup.join(''))
     }
 
 }
