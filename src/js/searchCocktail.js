@@ -1,21 +1,29 @@
-import { getCocktailsByLetter, getCocktailByWord} from "./cocktailsAPI";
-import { cardBuilder} from "./cocktailCard";
+import { getCocktailsByLetter, getCocktailByWord, getRandomCocktail} from "./cocktailsAPI";
+import { cardBuilder, randomCardBuilder} from "./cocktailCard";
 
-
+const cocktailList = document.querySelector('.cocktails__list');
 
 
 export function findCocktailBySearch(e) {
-    console.dir(e.target.value.length);
-
-    if (e.target.value.length === 1) {
+    if (e.target.value.length === 0) {
+        console.log(e.target.value.length);
+        cocktailList.innerHTML = '';
+        getRandomCocktail()
+    .then(randomCardBuilder)
+    .catch(error => { console.log(error); })
+        return
+    }
+    else if (e.target.value.length === 1) {
         getCocktailsByLetter(e.target.value.trim().toLowerCase())
             .then(cardBuilder)
             .catch(error => { console.log(error); })
-    } else {
+    } 
+    else {
         getCocktailByWord(e.target.value.trim().toLowerCase())
         .then(cardBuilder)
         .catch(error => { console.log(error); })
-    };
+    }
+   
 }
 
 

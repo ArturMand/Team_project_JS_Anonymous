@@ -2,7 +2,7 @@ const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 const gallery = document.querySelector('.hero__list');
 function addHeroSearch(items) {
   return  items.map( item => `<li class="hero__item">
-      <button class="hero__btn">${item}</button>
+       <button class="hero__btn">${item}</button>
     </li>`)
     .join('')
 }
