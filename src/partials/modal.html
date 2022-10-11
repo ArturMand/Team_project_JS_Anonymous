@@ -1,35 +1,41 @@
 <div class="modal">
-  <button class="modal__btn--close">
+  <button class="modal__btn--close" type="button">
     <svg width="32" height="32">
       <use href="./image/sprite.svg#icon-close"></use>
     </svg>
   </button>
   <h2 class="modal__title">Negroni</h2>
-  <h3 class="modal__title--secondary">Instractions:</h3>
-  <p class="modal__text">
-    Add the gin, Campari and sweet vermouth to a mixing glass filled with ice,
-    and stir until well-chilled. Strain into a rocks glass filled with large ice
-    cubes. Garnish with an orange peel.
-  </p>
-  <!-- <img src="" alt=""> -->
-  <h3 class="about__title">Ingredients</h3>
-  <p class="modal__text">Per cocktail</p>
-  <ul class="modal__list">
-    <li class="modal__item">
-      <a class="link modal__link" href="#">Ice</a>
-    </li>
-    <li class="modal__item">
-      <a class="link modal__link" href="#">1 ounce gin</a>
-    </li>
-    <li class="modal__item">
-      <a class="link modal__link" href="#">1 ounce Campari</a>
-    </li>
-    <li class="modal__item">
-      <a class="link modal__link" href="#">1 ounce sweet vermouth</a>
-    </li>
-    <li class="modal__item">
-      <a class="link modal__link" href="#">Garnish: orange peel</a>
-    </li>
-  </ul>
-  <button class="modal__btn">Add to favorite</button>
+  <div class="modal__box">
+    <div class="modal__container--text">
+      <h3 class="modal__title--secondary">Instractions:</h3>
+    <p class="modal__text">
+      Add the gin, Campari and sweet vermouth to a mixing glass filled with ice,
+      and stir until well-chilled. Strain into a rocks glass filled with large ice
+      cubes. Garnish with an orange peel.
+    </p>
+    </div>
+    <img class="modal__img" src="#" alt="Negroni cocktail" />
+    <div modal__container--list>
+      <h3 class="about__title">Ingredients</h3>
+    <p class="modal__description">Per cocktail</p>
+    <ul class="modal__list">
+      <li class="modal__item">
+        <a class="link modal__link" href="#">Ice</a>
+      </li>
+      <li class="modal__item">
+        <a class="link modal__link" href="#">1 ounce gin</a>
+      </li>
+      <li class="modal__item">
+        <a class="link modal__link" href="#">1 ounce Campari</a>
+      </li>
+      <li class="modal__item">
+        <a class="link modal__link" href="#">1 ounce sweet vermouth</a>
+      </li>
+      <li class="modal__item">
+        <a class="link modal__link" href="#">Garnish: orange peel</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <button class="modal__btn btn--orange cocktails__btn" type="button">Add to favorite</button>
 </div>
