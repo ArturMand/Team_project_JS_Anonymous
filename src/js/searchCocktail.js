@@ -9,6 +9,7 @@ export function findCocktailBySearch(e) {
     e.preventDefault()
     const { searchQuery } = e.target.elements
     const formValue = searchQuery.value.trim().toLowerCase()
+    console.log("🚀 ~ file: searchCocktail.js ~ line 12 ~ findCocktailBySearch ~ formValue", formValue)
     // console.log(e);
 
     if (formValue.length === 0) {
