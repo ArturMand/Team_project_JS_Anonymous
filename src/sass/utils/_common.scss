@@ -96,7 +96,9 @@ p {
   &:focus,
   &:hover {
     background-color: $white-color;
-    color: $button-light-orange-bgc;
+    color: $button-orange-bgc;
+
+    cursor: pointer;
   }
   &:checked {
     background-color: $button-orange-bgc;
@@ -116,8 +118,10 @@ p {
   &:hover {
     border: 1px solid $button-orange-bgc;
 
-    background-color: #f5f5f5;
+    background-color: $color-light-text;
     color: $button-orange-bgc;
+
+    cursor: pointer;
   }
   &:checked {
     border: 1px solid $button-orange-bgc;
