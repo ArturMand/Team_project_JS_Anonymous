@@ -1,8 +1,8 @@
 import { getCocktailsByLetter, getCocktailByWord, getRandomCocktail} from "./cocktailsAPI";
 import { cardBuilder, randomCardBuilder} from "./cocktailCard";
 import { Notify } from "notiflix";
+import { refs } from './selectorRefs';
 
-const cocktailList = document.querySelector('.cocktails__list');
 
 
 export function findCocktailBySearch(e) {
@@ -13,7 +13,7 @@ export function findCocktailBySearch(e) {
 
     if (formValue.length === 0) {
         // console.log(e.target.value.length);
-        cocktailList.innerHTML = '';
+        refs.cocktailList.innerHTML = '';
         getRandomCocktail()
     .then(randomCardBuilder)
     .catch(error => { console.log(error); })
@@ -22,7 +22,10 @@ export function findCocktailBySearch(e) {
     else if (formValue.length === 1) {
         getCocktailsByLetter(formValue)
             .then(cardBuilder)
-            .catch(error => { console.log(error); })
+            .catch(error => {
+                Notify.failure(`you must die!`)
+                console.log(error);
+            })
     } 
     else {
         getCocktailByWord(formValue)
