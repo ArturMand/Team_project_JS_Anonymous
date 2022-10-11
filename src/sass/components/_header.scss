@@ -1,13 +1,17 @@
-.header__box {
+.header__page {
   display: flex;
   align-items: center;
 
   padding: 20px;
+
+  // @media screen and (min-width: $min768) and (max-width: $max1200) {
+  //   justify-content: space-between;
+  // }
 }
 
 .header__link {
-  @media screen and (min-width: $min768) {
-    margin-left: auto;
+  @media screen and (min-width: $min768) and (max-width: $max1200) {
+    z-index: 3;
   }
 
   @media screen and (min-width: $min1200) {
@@ -27,6 +31,15 @@
   border-radius: 4px;
   margin-top: 37px;
   margin-bottom: 40px;
+
+  @media screen and (min-width: $min768) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $min768) and (max-width: $max1200) {
+    margin-left: 190px;
+  }
 }
 
 .header__label {
@@ -47,6 +60,16 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: $min768) and (max-width: $max1200) {
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: $max1200) {
+    display: none;
+  }
+
   @media screen and (min-width: $min1200) {
     align-items: center;
     flex-direction: row;
@@ -62,6 +85,16 @@
   letter-spacing: 0.02em;
   color: $main-color;
 
+  &:hover,
+  &:focus {
+    color: $button-orange-bgc;
+    cursor: pointer;
+
+    & .header__button--more {
+      fill: $button-orange-bgc;
+    }
+  }
+
   @media screen and (min-width: $min1200) {
     font-size: 18px;
     line-height: 1.33;
@@ -74,11 +107,27 @@
   margin-top: 32px;
   margin-bottom: 12px;
 
+  @media screen and (min-width: $min768) and (max-width: $max1200) {
+    margin-right: 40px;
+  }
+
+  @media screen and (max-width: $max1200) {
+    display: flex;
+  }
+
   @media screen and (min-width: $min1200) {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 60px;
-    margin-right: 43px;
+    margin-right: 0;
+  }
+}
+
+.header__button--more {
+  margin-left: 8px;
+
+  @media screen and (min-width: $min1200) {
+    display: none;
   }
 }
 
@@ -154,24 +203,45 @@
   @media screen and (max-width: $max768) {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
 
     padding: 22px 20px;
-    background-color: $white-color;
-  }
-
-  &.is-open {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
   }
 
   @media screen and (min-width: $min1200) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  &.is-open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $max1200) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+
+      background-color: $white-color;
+    }
+
+    @media screen and (min-width: $min768) and (max-width: $max1200) {
+      padding: 24px 16px;
+    }
+
+    & .header__form {
+      @media screen and (min-width: $min768) {
+        display: none;
+      }
+    }
+
+    & .header__nav {
+      @media screen and (max-width: $max1200) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }
