@@ -5,21 +5,25 @@ const cocktailList = document.querySelector('.cocktails__list');
 
 
 export function findCocktailBySearch(e) {
-    if (e.target.value.length === 0) {
-        console.log(e.target.value.length);
+    e.preventDefault()
+    const { searchQuery } = e.target.elements
+    const formValue = searchQuery.value.trim().toLowerCase()
+    console.log(formValue);
+    if (formValue.length === 0) {
+        // console.log(e.target.value.length);
         cocktailList.innerHTML = '';
         getRandomCocktail()
     .then(randomCardBuilder)
     .catch(error => { console.log(error); })
         return
     }
-    else if (e.target.value.length === 1) {
-        getCocktailsByLetter(e.target.value.trim().toLowerCase())
+    else if (formValue.length === 1) {
+        getCocktailsByLetter(formValue)
             .then(cardBuilder)
             .catch(error => { console.log(error); })
     } 
     else {
-        getCocktailByWord(e.target.value.trim().toLowerCase())
+        getCocktailByWord(formValue)
         .then(cardBuilder)
         .catch(error => { console.log(error); })
     }
