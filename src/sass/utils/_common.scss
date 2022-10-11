@@ -8,6 +8,9 @@ body {
   font-style: normal;
 
   color: $main-color;
+  &.active{
+    overflow: hidden;
+  }
 }
 
 button {

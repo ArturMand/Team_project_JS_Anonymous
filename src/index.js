@@ -11,7 +11,7 @@ import { findCocktailBySearch } from './js/searchCocktail';
 // import debounce from 'lodash.debounce';
 import { refs } from './js/selectorRefs';
 import { searchByABC } from './js/searchByABC';
-import { openModal } from './js/modal';
+import { openModal } from './js/modal/modal';
 
 mobileMenu();
 
