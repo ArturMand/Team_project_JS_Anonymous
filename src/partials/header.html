@@ -1,67 +1,73 @@
 <header class="header">
-  <div class="container">
-    <div class="header__box">
-      <a class="link header__link" href="./index.html">
-        <picture>
-          <source
-            srcset="
-              ./image/logo-mobile@1x.png 1x,
-              ./image/logo-mobile@2x.png 2x,
-              ./image/logo-mobile@3x.png 3x
-            "
-            media="(max-width:767px)"
-            type="image/png"
-          />
-          <source
-            srcset="
-              ./image/logo-tablet@1x.png 1x,
-              ./image/logo-tablet@2x.png 2x,
-              ./image/logo-tablet@3x.png 3x
-            "
-            media="(min-width:768px) and (max-width:1199px)"
-            type="image/png"
-          />
-          <source
-            srcset="
-              ./image/logo-desktop@1x.png 1x,
-              ./image/logo-desktop@2x.png 2x,
-              ./image/logo-desktop@3x.png 3x
-            "
-            media="(min-width:1200px)"
-            type="image/png"
-          />
-          <img
-            class="header__logo"
-            src="./image/logo-mobile@1x.png"
-            alt="logo"
-          />
-        </picture>
-      </a>
+  <div class="container header__page">
+    <a class="link header__link" href="./index.html">
+      <picture>
+        <source
+          srcset="
+            ./image/logo-mobile@1x.png 1x,
+            ./image/logo-mobile@2x.png 2x,
+            ./image/logo-mobile@3x.png 3x
+          "
+          media="(max-width:767px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/logo-tablet@1x.png 1x,
+            ./image/logo-tablet@2x.png 2x,
+            ./image/logo-tablet@3x.png 3x
+          "
+          media="(min-width:768px) and (max-width:1199px)"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./image/logo-desktop@1x.png 1x,
+            ./image/logo-desktop@2x.png 2x,
+            ./image/logo-desktop@3x.png 3x
+          "
+          media="(min-width:1200px)"
+          type="image/png"
+        />
+        <img class="header__logo" src="./image/logo-mobile@1x.png" alt="logo" />
+      </picture>
+    </a>
 
-      <div
-        class="mobile-menu__container js-menu-container"
-        id="mobile-menu__container"
-      >
-        <form class="header__form">
-          <label class="header__label" for="form__search">
-            <svg class="icon-search" width="19" height="19">
-              <use href="./image/sprite.svg#icon-search"></use>
+    <div
+      class="mobile-menu__container js-menu-container"
+      id="mobile-menu__container"
+    >
+      <form class="header__form">
+        <label class="header__label" for="form__search">
+          <svg class="icon-search" width="19" height="19">
+            <use href="./image/sprite.svg#icon-search"></use>
+          </svg>
+        </label>
+        <input
+          class="header__input"
+          id="form__search"
+          type="text"
+          name="searchQuery"
+          placeholder="Search"
+        />
+      </form>
+
+      <nav class="header__nav">
+        <a class="link header__link" href="./index.html">Home</a>
+        <button class="header__button header__link" type="button">
+          Favorite
+          <span class="header__button--more">
+            <svg
+              width="24"
+              height="24"
+              aria-label="learn more"
+            >
+              <use href="./image/sprite.svg#icon-vector"></use>
             </svg>
-          </label>
-          <input
-            class="header__input"
-            id="form__search"
-            type="text"
-            name="search-favorite-list"
-            placeholder="Search"
-          />
-        </form>
+          </span>
+        </button>
 
-        <nav class="header__nav">
-          <a class="link header__link" href="./index.html">Home</a>
-          <button class="header__button header__link" href="#">Favorite</button>
-
-          <!-- <div class="header__list">
+        <!-- <div class="header__list">
             <a class="link header__favorite--link" href="./favorite.html"
               >Favorite cocktails</a
             >
@@ -69,30 +75,30 @@
               >Favorite ingredients</a
             >
           </div> -->
-        </nav>
-      </div>
-
-      <button
-        class="menu__btn js-open-menu js-close-menu"
-        aria-controls="mobile-menu__container"
-      >
-        <svg
-          class="icon__menu--open"
-          width="30"
-          height="16"
-          aria-label="Open mobile menu"
-        >
-          <use href="./image/sprite.svg#icon-menu"></use>
-        </svg>
-        <svg
-          class="icon__menu--close"
-          width="32"
-          height="32"
-          aria-label="Open mobile menu"
-        >
-          <use href="./image/sprite.svg#icon-close"></use>
-        </svg>
-      </button>
+      </nav>
     </div>
+
+    <button
+      class="menu__btn js-open-menu js-close-menu"
+      aria-controls="mobile-menu__container"
+      type="button"
+    >
+      <svg
+        class="icon__menu--open"
+        width="30"
+        height="16"
+        aria-label="Open mobile menu"
+      >
+        <use href="./image/sprite.svg#icon-menu"></use>
+      </svg>
+      <svg
+        class="icon__menu--close"
+        width="32"
+        height="32"
+        aria-label="Open mobile menu"
+      >
+        <use href="./image/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
   </div>
 </header>
