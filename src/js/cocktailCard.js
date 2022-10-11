@@ -1,4 +1,4 @@
-import { refs } from './selectorsRefs';
+import { refs } from './selectorRefs';
 
 
 // fetchCocktails('2')
