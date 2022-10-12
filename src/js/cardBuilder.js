@@ -6,9 +6,3 @@ export function cardBuilder(cocktail) {
   refs.gallery.innerHTML = markup.join('');
 }
 
-export function randomCardBuilder(cocktail) {
-  for (const e of cocktail) {
-    const markup = e.drinks.map(createMarkup);
-    refs.gallery.insertAdjacentHTML('afterbegin', markup.join(''));
-  }
-}

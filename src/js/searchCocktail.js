@@ -1,5 +1,8 @@
-import { getCocktailsByLetter, getCocktailByWord, getRandomCocktail} from "./cocktailsAPI";
-import { cardBuilder, randomCardBuilder} from "./cocktailCard";
+import { getCocktailsByLetter } from "./renderCardByLetter";
+import { getRandomCocktail } from "./renderRandomCard"
+import { getCocktailByWord } from "./renderCardByWord";
+import { cardBuilder } from "./cardBuilder";
+import { randomCardBuilder } from "./cardBuilderRandom";
 import { Notify } from "notiflix";
 import { refs } from './selectorRefs';
 
@@ -24,7 +27,7 @@ export function findCocktailBySearch(e) {
         getCocktailsByLetter(formValue)
             .then(cardBuilder)
             .catch(error => {
-                Notify.failure(`you must die!`)
+                Notify.failure(`We hav't that cocktail`)
                 console.log(error);
             })
     } 
@@ -32,7 +35,7 @@ export function findCocktailBySearch(e) {
         getCocktailByWord(formValue)
         .then(cardBuilder)
             .catch(error => {
-                Notify.failure(`you must die!`)
+                Notify.failure(`We hav't that cocktail`)
                 // console.log(error);
             })
     }

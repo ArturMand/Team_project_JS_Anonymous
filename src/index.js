@@ -1,9 +1,5 @@
-import {
-  getCocktailsByLetter,
-  getCocktailByWord,
-  getRandomCocktail,
-} from './js/cocktailsAPI';
-import { cardBuilder, randomCardBuilder } from './js/cocktailCard';
+import { getRandomCocktail } from './js/renderRandomCard';
+import { randomCardBuilder } from './js/cardBuilderRandom';
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { addHeroSearch } from './js/heroAlphabet';
 import { mobileMenu } from './js/mobile-menu';

@@ -1,5 +1,5 @@
-import { getCocktailsByLetter } from './cocktailsAPI';
-import { cardBuilder } from './cocktailCard';
+import { getCocktailsByLetter } from './renderCardByLetter';
+import { cardBuilder } from './cardBuilder';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export function searchByABC(e) {
@@ -9,7 +9,7 @@ export function searchByABC(e) {
   getCocktailsByLetter(ourLetter)
     .then(cardBuilder)
     .catch(error => {
-      Notify.failure(`you must die!`);
+      Notify.failure(`We hav't cocktail, which begin with that letter`);
       console.log(error);
     });
 }
