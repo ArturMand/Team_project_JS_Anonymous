@@ -17,7 +17,7 @@ export function findCocktailBySearch(e) {
     // console.log(e);
 
     if (formValue.length === 0) {
-        Notify.info(`Please, write you cocktail`)
+        Notify.info(`Please, write your cocktail`)
         refs.gallery.innerHTML = ''
         getRandomCocktail()
         .then(randomCardBuilder)
