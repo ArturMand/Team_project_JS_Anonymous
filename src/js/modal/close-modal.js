@@ -1,4 +1,4 @@
-import { refs } from '../selectorRefs';
+import { refs } from '../refs/selectorRefs';
 import { toggleOverlay } from './overlay';
 
 export function closeModal(e) {
