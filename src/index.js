@@ -1,16 +1,12 @@
-import {
-  getCocktailsByLetter,
-  getCocktailByWord,
-  getRandomCocktail,
-} from './js/cocktailsAPI';
-import { cardBuilder, randomCardBuilder } from './js/cocktailCard';
+import { getRandomCocktail } from './js/render/renderRandomCard';
+import { randomCardBuilder } from './js/builders/cardBuilderRandom';
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { addHeroSearch } from './js/heroAlphabet';
+import { addHeroSearch } from './js/builders/heroAlphabet';
 import { mobileMenu } from './js/mobile-menu';
-import { findCocktailBySearch } from './js/searchCocktail';
+import { findCocktailBySearch } from './js/search/searchCocktail';
 // import debounce from 'lodash.debounce';
 import { refs } from './js/selectorRefs';
-import { searchByABC } from './js/searchByABC';
+import { searchByABC } from './js/search/searchByABC';
 import { openModal } from './js/modal/modal';
 
 mobileMenu();
