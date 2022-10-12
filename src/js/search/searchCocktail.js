@@ -1,10 +1,10 @@
-import { getCocktailsByLetter } from "./renderCardByLetter";
-import { getRandomCocktail } from "./renderRandomCard"
-import { getCocktailByWord } from "./renderCardByWord";
-import { cardBuilder } from "./cardBuilder";
-import { randomCardBuilder } from "./cardBuilderRandom";
+import { getCocktailsByLetter } from "../render/renderCardByLetter";
+import { getRandomCocktail } from "../render/renderRandomCard"
+import { getCocktailByWord } from "../render/renderCardByWord";
+import { cardBuilder } from "../builders/cardBuilder";
+import { randomCardBuilder } from "../builders/cardBuilderRandom";
 import { Notify } from "notiflix";
-import { refs } from './selectorRefs';
+import { refs } from '../selectorRefs';
 
 
 

@@ -1,5 +1,5 @@
-import { getCocktailsByLetter } from './renderCardByLetter';
-import { cardBuilder } from './cardBuilder';
+import { getCocktailsByLetter } from '../render/renderCardByLetter';
+import { cardBuilder } from '../builders/cardBuilder';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 export function searchByABC(e) {

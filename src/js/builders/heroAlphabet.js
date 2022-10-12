@@ -1,4 +1,4 @@
-import { refs } from './selectorRefs';
+import { refs } from '../selectorRefs';
 
 export function addHeroSearch(items) {
   const markup = items.map(item => 
