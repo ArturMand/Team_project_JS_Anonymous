@@ -9,4 +9,5 @@ export const refs = {
   modal: document.querySelector('[data-modal]'),
   btnCloseModal: document.querySelector('[data-modal-close]'),
   unscroll: document.querySelector('[data-unscroll]'),
+  qwerty: document.querySelector('.hero__datalist'),
 };

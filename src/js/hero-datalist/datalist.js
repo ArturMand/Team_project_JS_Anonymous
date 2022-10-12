@@ -1,4 +1,5 @@
-const input = document.querySelector('.hero__input');
+export function dataList() {
+  const input = document.querySelector('.hero__input');
 const cocktailsAbc = document.querySelector('#cocktails__abc');
 
 input.onfocus = function () {
@@ -52,4 +53,6 @@ function removeActive(x) {
   for (var i = 0; i < x.length; i++) {
     x[i].classList.remove('active');
   }
+}
+
 }
