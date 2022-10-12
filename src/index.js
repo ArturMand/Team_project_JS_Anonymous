@@ -5,15 +5,21 @@ import { findCocktailBySearch } from './js/search/searchCocktail';
 import { refs } from './js/refs/selectorRefs';
 import { searchByABC } from './js/search/searchByABC';
 import { openModal } from './js/modal/modal';
-import { Datalist } from './js/hero-datalist/datalist';
+import { dataList } from './js/hero-datalist/datalist';
 import { saveCocktail, saveIngredient } from './js/localStorage/getId';
 import { letters } from './js/refs/letterABC';
+import { addDatalistSearch } from './js/builders/heroDatalist'
+import { searchByDatalist } from './js/search/searchByDatalist';
 
 mobileMenu();
 startPageBuild();
 addHeroSearch(letters);
+addDatalistSearch(letters);
+dataList()
 
 refs.searchForm.addEventListener('submit', findCocktailBySearch);
 refs.list.addEventListener('click', searchByABC);
+refs.qwerty.addEventListener('click', searchByDatalist);
 refs.gallery.addEventListener('click', openModal);
 refs.gallery.addEventListener("click", saveCocktail);
+
