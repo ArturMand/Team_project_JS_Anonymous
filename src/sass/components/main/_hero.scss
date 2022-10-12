@@ -172,11 +172,6 @@
   width: 24px;
   height: 24px;
   fill: $button-orange-bgc;
-
-  & ~ .hero__datalist .hero__option.active {
-    background-color: $button-orange-bgc;
-    fill: $white-color;
-  }
 }
 
 .hero__input {
@@ -194,9 +189,14 @@
   color: $button-orange-bgc;
   cursor: pointer;
 
-  & ~ .hero__datalist .option:visited {
+  &:focus,
+  &:hover {
     background-color: $button-orange-bgc;
     color: $white-color;
+
+    & ~ .datalist__icon {
+      fill: $white-color;
+    }
   }
 }
 
