@@ -26,55 +26,55 @@
             ./image/logo-desktop@2x.png 2x,
             ./image/logo-desktop@3x.png 3x
           "
-          media="(min-width:1200px)"
+          media="(min-width:1280px)"
           type="image/png"
         />
         <img class="header__logo" src="./image/logo-mobile@1x.png" alt="logo" />
       </picture>
     </a>
 
-      <div
-        class="mobile-menu__container js-menu-container"
-        id="mobile-menu__container"
-      >
-        <form class="header__form">
-          <label class="header__label" for="form__search">
-            <svg class="icon-search" width="19" height="19">
-              <use href="./image/sprite.svg#icon-search"></use>
-            </svg>
-          </label>
-          <input
-            class="header__input"
-            id="form__search"
-            type="text"
-            name="searchQuery"
-            placeholder="Search"
-          />
-        </form>
+    <div
+      class="mobile-menu__container js-menu-container"
+      id="mobile-menu__container"
+    >
+      <form class="header__form">
+        <label class="header__label" for="form__search">
+          <svg class="icon-search" width="19" height="19">
+            <use href="./image/sprite.svg#icon-search"></use>
+          </svg>
+        </label>
+        <input
+          class="header__input"
+          id="form__search"
+          type="text"
+          name="searchQuery"
+          placeholder="Search"
+        />
+      </form>
 
       <nav class="header__nav">
         <a class="link header__link" href="./index.html">Home</a>
         <button class="header__button header__link" type="button">
           Favorite
           <span class="header__button--more">
-            <svg
-              width="24"
-              height="24"
-              aria-label="learn more"
-            >
+            <svg width="24" height="24" aria-label="learn more">
               <use href="./image/sprite.svg#icon-vector"></use>
             </svg>
           </span>
         </button>
 
-        <!-- <div class="header__list">
-            <a class="link header__favorite--link" href="./favorite.html"
-              >Favorite cocktails</a
-            >
-            <a class="link header__favorite--link" href="./favorite.html"
-              >Favorite ingredients</a
-            >
-          </div> -->
+        <div class="header__list">
+          <a
+            class="link header__favorite--link"
+            href="./partials/favorite/favorite-cocktails.html"
+            >Favorite cocktails</a
+          >
+          <a
+            class="link header__favorite--link"
+            href="./partials/favorite/favorite-ingredients.html"
+            >Favorite ingredients</a
+          >
+        </div>
       </nav>
     </div>
 

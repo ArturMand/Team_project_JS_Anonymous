@@ -1,11 +1,11 @@
 @import './utils/variables';
 @import './utils/common';
 
-@import './components/header';
-@import './components/favorite';
-@import './components/hero';
-@import './components/cocktails';
-@import './components/modal';
-@import './components/about';
-@import './components/footer';
+@import './components/header/header';
+@import './components/favorite/favorite';
+@import './components/main/hero';
+@import './components/main/cocktails';
+@import './components/main/modal/modal-cocktails';
+@import './components/main/modal/modal-ingredients';
+@import './components/footer/footer';
 @import './utils/overlay';

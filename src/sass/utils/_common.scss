@@ -8,7 +8,7 @@ body {
   font-style: normal;
 
   color: $main-color;
-  &.active{
+  &.active {
     overflow: hidden;
   }
 }
@@ -43,8 +43,8 @@ p {
     padding-right: 32px;
   }
 
-  @media screen and (min-width: $min1200) {
-    width: $min1200;
+  @media screen and (min-width: $min1280) {
+    width: $min1280;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -78,17 +78,17 @@ p {
 }
 
 .section {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @media screen and (min-width: $min768) {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 48px;
+    padding-bottom: 60px;
   }
 
-  @media screen and (min-width: $min1200) {
-    margin-top: 40px;
-    margin-bottom: 60px;
+  @media screen and (min-width: $min1280) {
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 }
 

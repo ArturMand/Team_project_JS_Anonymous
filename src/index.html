@@ -6,18 +6,19 @@
     <title>Cocktails</title>
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
-  <body  data-unscroll>
-    <include src="./partials/header.html"></include>
+  <body data-unscroll>
+    <include src="./partials/header/header.html"></include>
 
     <main>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/cocktails.html"></include>
-      <include src="./partials/about.html"></include>
+      <include src="./partials/main/hero.html"></include>
+      <include src="./partials/main/cocktails.html"></include>
     </main>
-    <include src="./partials/footer.html"></include>
-    
+    <include src="./partials/footer/footer.html"></include>
+
     <script type="module" src="./index.js"></script>
     <div class="overlay" data-overlay></div>
-    <include src="./partials/modal.html"></include>
+
+    <include src="./partials/main/modal/modal-cocktails.html"></include>
+    <include src="./partials/main/modal/modal-ingredients.html"></include>
   </body>
 </html>

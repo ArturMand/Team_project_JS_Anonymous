@@ -1,20 +1,15 @@
 .header__page {
   display: flex;
   align-items: center;
-
-  padding: 20px;
-
-  // @media screen and (min-width: $min768) and (max-width: $max1200) {
-  //   justify-content: space-between;
-  // }
 }
 
 .header__link {
-  @media screen and (min-width: $min768) and (max-width: $max1200) {
+  padding: 20px 0;
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
     z-index: 3;
   }
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     margin-left: 43px;
   }
 }
@@ -33,11 +28,11 @@
   margin-bottom: 40px;
 
   @media screen and (min-width: $min768) {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
-  @media screen and (min-width: $min768) and (max-width: $max1200) {
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
     margin-left: 190px;
   }
 }
@@ -60,17 +55,17 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: $min768) and (max-width: $max1200) {
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
     margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  @media screen and (max-width: $max1200) {
+  @media screen and (max-width: $max1280) {
     display: none;
   }
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     align-items: center;
     flex-direction: row;
 
@@ -95,7 +90,7 @@
     }
   }
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     font-size: 18px;
     line-height: 1.33;
   }
@@ -107,15 +102,15 @@
   margin-top: 32px;
   margin-bottom: 12px;
 
-  @media screen and (min-width: $min768) and (max-width: $max1200) {
+  @media screen and (min-width: $min768) and (max-width: $max1280) {
     margin-right: 40px;
   }
 
-  @media screen and (max-width: $max1200) {
+  @media screen and (max-width: $max1280) {
     display: flex;
   }
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 60px;
@@ -126,7 +121,7 @@
 .header__button--more {
   margin-left: 8px;
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     display: none;
   }
 }
@@ -171,7 +166,7 @@
 
   z-index: 3;
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     display: none;
   }
 }
@@ -207,7 +202,7 @@
     padding: 22px 20px;
   }
 
-  @media screen and (min-width: $min1200) {
+  @media screen and (min-width: $min1280) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -218,7 +213,7 @@
     display: flex;
     flex-direction: column;
 
-    @media screen and (max-width: $max1200) {
+    @media screen and (max-width: $max1280) {
       top: 0;
       left: 0;
       width: 100%;
@@ -227,7 +222,7 @@
       background-color: $white-color;
     }
 
-    @media screen and (min-width: $min768) and (max-width: $max1200) {
+    @media screen and (min-width: $min768) and (max-width: $max1280) {
       padding: 24px 16px;
     }
 
@@ -238,7 +233,7 @@
     }
 
     & .header__nav {
-      @media screen and (max-width: $max1200) {
+      @media screen and (max-width: $max1280) {
         display: flex;
         flex-direction: column;
       }
