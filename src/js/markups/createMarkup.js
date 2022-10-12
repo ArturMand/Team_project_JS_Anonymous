@@ -17,3 +17,4 @@ export function createMarkup({ strDrinkThumb, strDrink }) {
   </div>
 </li>`;
 }
+
