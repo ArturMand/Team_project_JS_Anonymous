@@ -6,11 +6,14 @@ import { refs } from './js/refs/selectorRefs';
 import { searchByABC } from './js/search/searchByABC';
 import { openModal } from './js/modal/modal';
 import { Datalist } from './js/hero-datalist/datalist';
+import { saveCocktail, saveIngredient } from './js/localStorage/getId';
+import { letters } from './js/refs/letterABC';
 
 mobileMenu();
-startPageBuild()
+startPageBuild();
 addHeroSearch(letters);
 
 refs.searchForm.addEventListener('submit', findCocktailBySearch);
 refs.list.addEventListener('click', searchByABC);
 refs.gallery.addEventListener('click', openModal);
+refs.gallery.addEventListener("click", saveCocktail);
