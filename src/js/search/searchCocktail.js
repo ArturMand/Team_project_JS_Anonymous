@@ -4,8 +4,8 @@ import { getCocktailByWord } from "../fetch/fetchCardByWord";
 import { cardBuilder } from "../builders/cardBuilder";
 import { randomCardBuilder } from "../builders/cardBuilderRandom";
 import { Notify } from "notiflix";
-import { refs } from '../selectorRefs';
-import { errorMarkup } from "../createMarkup";
+import { refs } from '../refs/selectorRefs';
+import { errorMarkup } from "../markups/errorMarkup";
 
 
 
@@ -14,7 +14,6 @@ export function findCocktailBySearch(e) {
     const { searchQuery } = e.target.elements
     const formValue = searchQuery.value.trim().toLowerCase()
     console.log("🚀 ~ file: searchCocktail.js ~ line 12 ~ findCocktailBySearch ~ formValue", formValue)
-    // console.log(e);
 
     if (formValue.length === 0) {
         Notify.info(`Please, write your cocktail`)
