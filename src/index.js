@@ -6,9 +6,10 @@ import { refs } from './js/refs/selectorRefs';
 import { searchByABC } from './js/search/searchByABC';
 import { openModal } from './js/modal/modal';
 import { Datalist } from './js/hero-datalist/datalist';
+import { Navigation } from './js/nav-link/navigation';
 
 mobileMenu();
-startPageBuild()
+startPageBuild();
 addHeroSearch(letters);
 
 refs.searchForm.addEventListener('submit', findCocktailBySearch);
