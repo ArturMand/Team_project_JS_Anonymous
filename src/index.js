@@ -1,4 +1,4 @@
-import { getRandomCocktail } from './js/render/renderRandomCard';
+import { getRandomCocktail } from './js/fetch/fetchRandomCard';
 import { randomCardBuilder } from './js/builders/cardBuilderRandom';
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { addHeroSearch } from './js/builders/heroAlphabet';
