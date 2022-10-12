@@ -1,0 +1,237 @@
+.hero {
+  @media screen and (min-width: $min768) {
+    position: relative;
+
+    padding-top: 68px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $min1280) {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.hero__container {
+  @media screen and (min-width: $min768) {
+    position: relative;
+
+    padding-top: 44px;
+    padding-bottom: 146px;
+  }
+
+  @media screen and (min-width: $min1280) {
+    padding-top: 60px;
+    padding-bottom: 152px;
+  }
+}
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $min768) {
+    flex-direction: row;
+  }
+}
+
+.hero__title {
+  margin-bottom: 28px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.9;
+
+  color: $button-orange-bgc;
+
+  @media screen and (min-width: $min768) {
+    width: 336px;
+    margin-right: 32px;
+    margin-bottom: 40px;
+
+    font-size: 26px;
+    line-height: 1.61;
+  }
+
+  @media screen and (min-width: $min1280) {
+    width: 688px;
+    margin-right: 59px;
+    font-size: 52px;
+    line-height: 1.54;
+  }
+}
+
+.hero__image {
+  width: 100%;
+  margin-bottom: 28px;
+
+  @media screen and (min-width: $min768) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 325px;
+
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $min1280) {
+    width: 501px;
+  }
+}
+
+.hero__text {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+
+  color: #000000;
+  opacity: 0.8;
+
+  @media screen and (min-width: $min768) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $min1280) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.hero__list {
+  display: none;
+
+  @media screen and (min-width: $min768) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 325px;
+  }
+
+  @media screen and (min-width: $min1280) {
+    width: 519px;
+  }
+}
+
+.hero__btn {
+  width: 24px;
+  height: 25px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: $secondary-color-text;
+  background-color: $white-color;
+
+  &:focus,
+  &:hover {
+    -webkit-text-stroke: 1px #000000;
+    color: $button-orange-bgc;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+  }
+
+  &:checked {
+    color: $main-color;
+  }
+
+  @media screen and (min-width: $min1280) {
+    width: 39px;
+    height: 40px;
+
+    font-size: 24px;
+  }
+}
+
+// datalist
+
+.datalist__box {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  @media screen and (min-width: $min768) {
+    display: none;
+  }
+}
+
+.datalist__icon {
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  width: 24px;
+  height: 24px;
+  fill: $button-orange-bgc;
+
+  & ~ .hero__datalist .hero__option.active {
+    background-color: $button-orange-bgc;
+    fill: $white-color;
+  }
+}
+
+.hero__input {
+  width: 93px;
+  height: 34px;
+
+  padding: 6px 10px;
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.35;
+
+  color: $button-orange-bgc;
+  cursor: pointer;
+
+  & ~ .hero__datalist .option:visited {
+    background-color: $button-orange-bgc;
+    color: $white-color;
+  }
+}
+
+.hero__datalist {
+  position: absolute;
+  top: 100%;
+
+  width: 93px;
+  max-height: 84px;
+
+  border: 1px solid $button-orange-bgc;
+  border-radius: 4px;
+
+  overflow-y: auto;
+
+  background-color: $white-color;
+}
+
+.hero__option {
+  display: flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.5;
+
+  color: $secondary-color-text;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  .active {
+    background-color: $button-orange-bgc;
+    color: $white-color;
+  }
+}
