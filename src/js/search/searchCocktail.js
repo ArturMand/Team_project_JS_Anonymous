@@ -5,6 +5,7 @@ import { cardBuilder } from "../builders/cardBuilder";
 import { randomCardBuilder } from "../builders/cardBuilderRandom";
 import { Notify } from "notiflix";
 import { refs } from '../selectorRefs';
+import { errorMarkup } from "../createMarkup";
 
 
 
@@ -17,17 +18,20 @@ export function findCocktailBySearch(e) {
 
     if (formValue.length === 0) {
         // console.log(e.target.value.length);
-        refs.cocktailList.innerHTML = '';
-        getRandomCocktail()
-    .then(randomCardBuilder)
-    .catch(error => { console.log(error); })
-        return
+        refs.gallery.innerHTML = errorMarkup();
+        Notify.failure(`Please, write you cocktail`)
+    //     getRandomCocktail()
+    // .then(randomCardBuilder)
+    // .catch(error => { console.log(error); })
+    //     return
+        
     }
     else if (formValue.length === 1) {
         getCocktailsByLetter(formValue)
             .then(cardBuilder)
             .catch(error => {
-                Notify.failure(`We hav't that cocktail`)
+                refs.gallery.innerHTML = errorMarkup();
+                Notify.failure(`We haven't that cocktail. Please, write another symbol`)
                 console.log(error);
             })
     } 
@@ -35,7 +39,8 @@ export function findCocktailBySearch(e) {
         getCocktailByWord(formValue)
         .then(cardBuilder)
             .catch(error => {
-                Notify.failure(`We hav't that cocktail`)
+                refs.gallery.innerHTML = errorMarkup();
+                Notify.failure(`We haven't that cocktail. Please, check your word`)
                 // console.log(error);
             })
     }
