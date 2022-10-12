@@ -1,6 +1,6 @@
-import { getCocktailsByLetter } from "../render/renderCardByLetter";
-import { getRandomCocktail } from "../render/renderRandomCard"
-import { getCocktailByWord } from "../render/renderCardByWord";
+import { getCocktailsByLetter } from "../fetch/fetchCardByLetter";
+import { getRandomCocktail } from "../fetch/fetchRandomCard"
+import { getCocktailByWord } from "../fetch/fetchCardByWord";
 import { cardBuilder } from "../builders/cardBuilder";
 import { randomCardBuilder } from "../builders/cardBuilderRandom";
 import { Notify } from "notiflix";
@@ -17,13 +17,12 @@ export function findCocktailBySearch(e) {
     // console.log(e);
 
     if (formValue.length === 0) {
-        // console.log(e.target.value.length);
-        refs.gallery.innerHTML = errorMarkup();
-        Notify.failure(`Please, write you cocktail`)
-    //     getRandomCocktail()
-    // .then(randomCardBuilder)
-    // .catch(error => { console.log(error); })
-    //     return
+        Notify.info(`Please, write you cocktail`)
+        refs.gallery.innerHTML = ''
+        getRandomCocktail()
+        .then(randomCardBuilder)
+        .catch(error => { console.log(error); })
+        return
         
     }
     else if (formValue.length === 1) {
@@ -41,7 +40,6 @@ export function findCocktailBySearch(e) {
             .catch(error => {
                 refs.gallery.innerHTML = errorMarkup();
                 Notify.failure(`We haven't that cocktail. Please, check your word`)
-                // console.log(error);
             })
     }
    

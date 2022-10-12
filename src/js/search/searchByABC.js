@@ -1,4 +1,4 @@
-import { getCocktailsByLetter } from '../render/renderCardByLetter';
+import { getCocktailsByLetter } from '../fetch/fetchCardByLetter';
 import { cardBuilder } from '../builders/cardBuilder';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { refs } from '../selectorRefs';
