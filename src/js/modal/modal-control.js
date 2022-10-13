@@ -1,5 +1,6 @@
 import { closeModal } from './close-modal';
 import { data } from '../localStorage/dataStorage';
+import { toggleModalIngr } from './toggle-modal-ingredient';
 
 export function modalControl(e) {
   if (e.target.hasAttribute('data-modal-close')) {
@@ -14,6 +15,6 @@ export function modalControl(e) {
   }
 
   if(e.target.hasAttribute('data-modal-ingredient')){
-    data.ingredients = e.target.name;
+    toggleModalIngr()
   }
 }
