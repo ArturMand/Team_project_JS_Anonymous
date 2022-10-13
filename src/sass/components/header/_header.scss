@@ -238,6 +238,17 @@
 
     @media screen and (min-width: $min768) and (max-width: $max1280) {
       padding: 24px 16px;
+
+      &::after {
+        content: '';
+        margin-top: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -24px;
+
+        height: 110px;
+        background-color: $button-orange-bgc;
+      }
     }
 
     & .header__form {
