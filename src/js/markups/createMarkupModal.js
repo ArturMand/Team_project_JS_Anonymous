@@ -7,24 +7,17 @@ export function createMarkupModalCocktail({ strDrinkThumb, strDrink,idDrink,strI
     </svg>
   </button>
   <h2 class="modal__title">${strDrink}</h2>
-    <div class="modal__box">
-      <div class="modal__container--text">
         <h3 class="modal__title--secondary">Instractions:</h3>
         <p class="modal__text">
           ${strInstructions}
         </p>
-      </div>
       <img class="modal__img" src="${strDrinkThumb}" alt="${strDrink}" />
-      <div modal__container--list>
+ 
         <h3 class="about__title">Ingredients</h3>
         <p class="modal__description">Per cocktail</p>
-        <ul class="modal__list">
-        </ul> 
-      </div>
-    </div>
+        <ul class="list modal__list">
+        </ul>
     <button class="modal__btn btn--orange cocktails__btn" type="button" data-cock-local name="${idDrink}">
       Add to favorite
     </button>`;
 }
-
-
