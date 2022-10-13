@@ -10,7 +10,7 @@
   }
 
   @media screen and (min-width: $min1280) {
-    margin-left: 43px;
+    margin-right: 43px;
   }
 }
 
@@ -25,11 +25,11 @@
   border: 1px solid $button-orange-bgc;
   border-radius: 4px;
   margin-top: 37px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 
   @media screen and (min-width: $min768) {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   @media screen and (min-width: $min768) and (max-width: $max1280) {
@@ -79,7 +79,10 @@
   }
 }
 
-.header__link {
+.nav__link {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   font-weight: 400;
   font-size: 28px;
   line-height: 0.86;
@@ -95,6 +98,10 @@
       fill: $button-orange-bgc;
     }
   }
+  @media screen and (min-width: $min768) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   @media screen and (min-width: $min1280) {
     font-size: 18px;
@@ -104,12 +111,11 @@
 
 .header__button {
   width: 150px;
-
-  margin-top: 32px;
   margin-bottom: 12px;
 
   @media screen and (min-width: $min768) and (max-width: $max1280) {
-    margin-left: 57px;
+    margin-left: 60px;
+    margin-bottom: 0;
     justify-content: center;
   }
 
@@ -146,12 +152,12 @@
   @media screen and (min-width: $min768) {
     position: absolute;
     top: 100%;
-    left: 46%;
+    left: 44%;
   }
 
   @media screen and (min-width: $min1280) {
-    top: 85%;
-    left: 113%;
+    top: 70%;
+    left: 57%;
   }
 }
 
