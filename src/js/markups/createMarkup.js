@@ -10,7 +10,7 @@ export function createMarkup({ strDrinkThumb, strDrink, idDrink }) {
       <button id="${idDrink}" class="btn--white cocktails__btn" data-favorite="btn" type="button">
         Add to
         <svg class="cocktails__svg" width="22" height="19">
-          <use href="./image/sprite.svg#icon-heart"></use>
+          <use href="../src/image/sprite.svg#icon-heart"></use>
         </svg>
       </button>
     </div>
