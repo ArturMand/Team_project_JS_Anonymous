@@ -1,6 +1,5 @@
-export function errorMarkup() {
-  return `<div>
-            <h3 class="cocktails__title">Sorry, we didn't find
+export const errorMarkup = `<div class="cocktails__title">
+            <h3 >Sorry, we didn't find
               <br>
                 any cocktail for you
             </h3>
@@ -14,12 +13,3 @@ export function errorMarkup() {
                 <img src="/sorry-mobile@1x.4969a47b.jpg" alt='sorry'>
             </picture>
         </div>`
-//   return `<div>
-//             <h3 class="cocktails__title">Sorry, we didn't find
-//               <br>
-//                 any cocktail for you
-//             </h3>
-//             <img src="/sorry-mobile@1x.4969a47b.jpg" alt='sorry'>
-
-//         </div>`
-}
