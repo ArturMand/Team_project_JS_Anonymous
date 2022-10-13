@@ -10,4 +10,8 @@ export const refs = {
   unscroll: document.querySelector('[data-unscroll]'),
   btnCloseModal: document.querySelector('[data-modal-close]'),
   qwerty: document.querySelector('.hero__datalist'),
+  listFavCock: document.querySelector('.cocktails__list--favorite'),
+  listFavIngr: document.querySelector('.cocktails__list--favIngr'),
+  textFavPageCockt: document.querySelector('.text__favorite--cocktails'),
+  textFavPageIngr: document.querySelector('.text__favorite--ingredients'),
 };
