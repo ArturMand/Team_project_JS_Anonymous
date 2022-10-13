@@ -38,6 +38,10 @@
 }
 
 .header__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding-right: 8px;
   border-right: 1px solid $button-orange-bgc;
   margin-right: 8px;
