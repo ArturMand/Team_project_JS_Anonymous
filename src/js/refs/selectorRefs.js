@@ -15,4 +15,6 @@ export const refs = {
   textFavPageCockt: document.querySelector('.text__favorite--cocktails'),
   textFavPageIngr: document.querySelector('.text__favorite--ingredients'),
   cockTitle: document.querySelector('h2.cocktails__title'),
+  modalIngr: document.querySelector('[data-modal-ingredient]'),
+  overlayIngr: document.querySelector('[data-overlay-ingredient]'),
 };
