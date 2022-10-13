@@ -18,22 +18,12 @@ export async function pageFavCocktails() {
     const res = await Promise.all(array);
 
     for (const cocktail of res) {
-        console.log(cocktail);
         const markup = cocktail.drinks.map(createMarkup);
         refs.listFavCock.insertAdjacentHTML("beforeend", markup);
-    };
+  };
 
-    const arrBtnAddTo = document.querySelectorAll('button[data-favorite="btn"]');
-    arrBtnAddTo.forEach(element => {
-      element.textContent = 'Remove';
-    });
-    
-    refs.listFavCock.addEventListener('click', removeFromFavorite);
-    function removeFromFavorite(e) {
-        if (!e.target.dataset.favorite) {
-            return;
-        }
-
-        console.log(e.target);
-    };
+  const arrBtnAddTo = document.querySelectorAll('button[data-favorite="btn"]');
+  arrBtnAddTo.forEach(element => {
+        element.textContent = 'Remove';
+  });
 };
