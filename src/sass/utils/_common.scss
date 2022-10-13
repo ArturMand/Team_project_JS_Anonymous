@@ -104,7 +104,7 @@ p {
   color: $white-color;
   background-color: $button-light-orange-bgc;
 
-  &:focus,
+  // &:focus,
   &:hover {
     background-color: $white-color;
     color: $button-orange-bgc;
@@ -126,7 +126,7 @@ p {
   color: $button-orange-bgc;
   background-color: $white-color;
 
-  &:focus,
+  // &:focus,
   &:hover {
     border: 1px solid $button-orange-bgc;
 
