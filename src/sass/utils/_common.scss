@@ -8,6 +8,8 @@ body {
   font-style: normal;
 
   color: $main-color;
+  background-color: $white-color;
+
   &.active {
     overflow: hidden;
   }
