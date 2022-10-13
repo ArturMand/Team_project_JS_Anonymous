@@ -141,6 +141,8 @@
   border: 1px solid $button-orange-bgc;
   border-radius: 4px;
 
+  background-color: $white-color;
+
   @media screen and (min-width: $min768) {
     position: absolute;
     top: 100%;
