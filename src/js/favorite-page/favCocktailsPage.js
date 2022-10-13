@@ -16,7 +16,8 @@ export async function pageFavCocktails() {
     });
 
     const res = await Promise.all(array);
-
+  console.log(res);
+  
     for (const cocktail of res) {
         const markup = cocktail.drinks.map(createMarkup);
         refs.listFavCock.insertAdjacentHTML("beforeend", markup);

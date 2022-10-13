@@ -2,7 +2,7 @@ import {refs} from "../refs/selectorRefs";
 import { saveCocktail } from '../localStorage/getId';
 import { pageFavCocktails } from "./favCocktailsPage";
 
-export function removeFav(e) {
+export function removeFav() {
     refs.listFavCock.addEventListener('click', removeFromFavorite);
 
     function removeFromFavorite(e) {
@@ -13,5 +13,4 @@ export function removeFav(e) {
         refs.listFavCock.innerHTML = '';
         pageFavCocktails();
     };
-    
 }
