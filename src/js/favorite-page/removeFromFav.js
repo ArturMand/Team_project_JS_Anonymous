@@ -6,6 +6,9 @@ export function removeFav() {
     refs.listFavCock.addEventListener('click', removeFromFavorite);
 
     function removeFromFavorite(e) {
+        if (!e.target.dataset.favorite) {
+        return;
+    }
         saveCocktail(e);
         refs.listFavCock.innerHTML = '';
         pageFavCocktails();
