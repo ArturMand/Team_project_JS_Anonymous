@@ -14,4 +14,5 @@ export const refs = {
   listFavIngr: document.querySelector('.cocktails__list--favIngr'),
   textFavPageCockt: document.querySelector('.text__favorite--cocktails'),
   textFavPageIngr: document.querySelector('.text__favorite--ingredients'),
+  cockTitle: document.querySelector('h2.cocktails__title'),
 };
