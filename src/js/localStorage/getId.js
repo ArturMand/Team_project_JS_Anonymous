@@ -1,7 +1,6 @@
 import { data } from './dataStorage';
 
 export function saveCocktail(e) {
-    console.log(e.target);
     if (!e.target.dataset.favorite) {
         return;
     }
