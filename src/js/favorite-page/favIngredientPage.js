@@ -5,7 +5,6 @@ import { createMarkupIngr } from '../markups/createMarkupIngr';
 import { btnIcon } from '../markups/createMarkup';
 export async function pageFavIngredients() {
     const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
-    console.log('~ parsedArray', parsedArray)
     if (parsedArray.length === 0) {
       refs.textFavPageIngr.textContent = 'No ingredients added yet!';
       return;
