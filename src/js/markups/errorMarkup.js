@@ -1,4 +1,4 @@
-export const errorMarkup = `<div class="cocktails__title">
+export const errorMarkup = `<li class="cocktails__title">
             <h3 >Sorry, we didn't find
               <br>
                 any cocktail for you
@@ -12,4 +12,4 @@ export const errorMarkup = `<div class="cocktails__title">
                     media="(min-width:1200px)" type="image/jpg">
                 <img src="/sorry-mobile@1x.4969a47b.jpg" alt='sorry'>
             </picture>
-        </div>`
+        </li>`
