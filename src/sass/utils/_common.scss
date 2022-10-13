@@ -120,15 +120,15 @@ p {
 .btn--white {
   display: flex;
 
-  border: 2px solid $button-orange-bgc;
+  border: 2px solid $button-light-orange-bgc;
   border-radius: 4px;
 
-  color: $button-orange-bgc;
+  color: $button-light-orange-bgc;
   background-color: $white-color;
 
   // &:focus,
   &:hover {
-    border: 1px solid $button-orange-bgc;
+    border: 2px solid $button-orange-bgc;
 
     background-color: $color-light-text;
     color: $button-orange-bgc;
