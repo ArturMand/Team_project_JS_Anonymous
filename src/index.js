@@ -13,6 +13,7 @@ import { searchByDatalist } from './js/search/searchByDatalist';
 
 import { modalControl } from './js/modal/modal-control';
 import { Navigation } from './js/nav-link/navigation';
+import { modalIngrConrol } from './js/modal/modal-Ingr-conrol';
 
 mobileMenu();
 startPageBuild();
@@ -26,3 +27,4 @@ refs.qwerty.addEventListener('click', searchByDatalist);
 refs.gallery.addEventListener('click', openModal);
 refs.gallery.addEventListener("click", saveCocktail);
 refs.modal.addEventListener('click',modalControl)
+refs.modalIngr.addEventListener('click',modalIngrConrol)
