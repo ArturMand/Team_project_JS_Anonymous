@@ -7,7 +7,7 @@ import { removeFav } from './js/favorite-page/removeFromFavIngr';
 import { saveCocktail } from './js/localStorage/getId';
 import { modalControl } from './js/modal/modal-control';
 import { modalIngrConrol } from './js/modal/modal-Ingr-conrol';
-
+import { Navigation } from './js/nav-link/navigation';
 mobileMenu();
 pageFavIngredients();
 removeFav();

@@ -11,6 +11,7 @@ import { letters } from './js/refs/letterABC';
 import { addDatalistSearch } from './js/builders/heroDatalist';
 import { searchByDatalist } from './js/search/searchByDatalist';
 import { modalControl } from './js/modal/modal-control';
+import { Navigation } from './js/nav-link/navigation';
 import { modalIngrConrol } from './js/modal/modal-Ingr-conrol';
 
 mobileMenu();
