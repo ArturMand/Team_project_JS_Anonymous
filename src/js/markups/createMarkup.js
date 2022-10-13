@@ -1,3 +1,6 @@
+export const btnIcon = document.querySelector('.btn__iconLove');
+btnIcon.remove();
+
 export function createMarkup({ strDrinkThumb, strDrink, idDrink }) {
 
   return `<li class="cocktails__item">
@@ -9,10 +12,7 @@ export function createMarkup({ strDrinkThumb, strDrink, idDrink }) {
         Learn more
       </button>
       <button id="${idDrink}" class="btn--white cocktails__btn" data-favorite="btn" type="button">
-        Add to
-        <svg class="cocktails__svg" width="22" height="19">
-          <use href="../sprite.e568e7cb.svg#icon-heart"></use>
-        </svg>
+        Add to ${btnIcon.outerHTML}
       </button>
     </div>
   </div>

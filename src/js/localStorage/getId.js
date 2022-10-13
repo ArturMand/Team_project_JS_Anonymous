@@ -1,4 +1,5 @@
 import { data, FAVORITE_KEY, INGREDIENTS_KEY } from './dataStorage';
+import { btnIcon } from '../markups/createMarkup';
 
 export function saveCocktail(e) {
     if (!e.target.dataset.favorite) {
@@ -8,10 +9,10 @@ export function saveCocktail(e) {
 
     const parsedArray = JSON.parse(localStorage.getItem(FAVORITE_KEY));
     if (!parsedArray.includes(e.target.id)) {
-        e.target.textContent = 'Add to';
+        e.target.innerHTML = `Add to ${btnIcon.outerHTML}`;
         return;
     }
-    e.target.textContent = 'Remove';   
+    e.target.innerHTML = `Remove ${btnIcon.outerHTML}`;   
 };
 
 export function saveIngredient(e) {
@@ -19,11 +20,7 @@ export function saveIngredient(e) {
         return;
     }
     data.ingredients = e.target.name;
-
-    // const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
-    // if (!parsedArray.includes(e.target.name)) {
-    //     e.target.textContent = 'Add to';
-    //     return;
-    // }
-    // e.target.textContent = 'Remove';  
 };
+
+
+        

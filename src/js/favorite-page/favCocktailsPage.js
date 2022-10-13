@@ -2,7 +2,7 @@ import { refs } from "../refs/selectorRefs";
 import { FAVORITE_KEY } from '../localStorage/dataStorage';
 import { getInfo } from '../fetch/fetchCocktailInformation';
 import { createMarkup } from '../markups/createMarkup';
-// import { data } from '../js/localStorage/dataStorage';
+import { btnIcon } from '../markups/createMarkup';
 
 export async function pageFavCocktails() {
     const parsedArray = JSON.parse(localStorage.getItem(FAVORITE_KEY));
@@ -25,6 +25,6 @@ export async function pageFavCocktails() {
 
   const arrBtnAddTo = document.querySelectorAll('button[data-favorite="btn"]');
   arrBtnAddTo.forEach(element => {
-        element.textContent = 'Remove';
+        element.innerHTML = `Remove ${btnIcon.outerHTML}`;
   });
 };
