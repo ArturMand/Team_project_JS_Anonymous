@@ -38,6 +38,10 @@
 }
 
 .header__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding-right: 8px;
   border-right: 1px solid $button-orange-bgc;
   margin-right: 8px;
@@ -136,6 +140,8 @@
   width: 214px;
   border: 1px solid $button-orange-bgc;
   border-radius: 4px;
+
+  background-color: $white-color;
 
   @media screen and (min-width: $min768) {
     position: absolute;
