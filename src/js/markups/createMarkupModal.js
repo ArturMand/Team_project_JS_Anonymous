@@ -1,4 +1,8 @@
-export function createMarkupModalCocktail({ strDrinkThumb, strDrink,idDrink }) {
+export function createMarkupModalCocktail({
+  strDrinkThumb,
+  strDrink,
+  idDrink,
+}) {
   return `
   <button class="modal__btn--close" type="button" >
     <svg width="32" height="32" data-modal-close>
@@ -6,26 +10,19 @@ export function createMarkupModalCocktail({ strDrinkThumb, strDrink,idDrink }) {
     </svg>
   </button>
   <h2 class="modal__title">${strDrink}</h2>
-    <div class="modal__box">
-      <div class="modal__container--text">
         <h3 class="modal__title--secondary">Instractions:</h3>
         <p class="modal__text">
           Add the gin, Campari and sweet vermouth to a mixing glass filled with
           ice, and stir until well-chilled. Strain into a rocks glass filled with
           large ice cubes. Garnish with an orange peel.
         </p>
-      </div>
       <img class="modal__img" src="${strDrinkThumb}" alt="${strDrink}" />
-      <div modal__container--list>
+ 
         <h3 class="about__title">Ingredients</h3>
         <p class="modal__description">Per cocktail</p>
-        <ul class="modal__list">
-        </ul> 
-      </div>
-    </div>
+        <ul class="list modal__list">
+        </ul>
     <button class="modal__btn btn--orange cocktails__btn" type="button" data-cock-local name="${idDrink}">
       Add to favorite
     </button>`;
 }
-
-
