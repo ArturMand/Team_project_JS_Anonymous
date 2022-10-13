@@ -7,6 +7,7 @@ export const refs = {
   overlay: document.querySelector('[data-overlay]'),
   btnOpenModal: document.querySelector('[data-modal-open]'),
   modal: document.querySelector('[data-modal]'),
-  btnCloseModal: document.querySelector('[data-modal-close]'),
   unscroll: document.querySelector('[data-unscroll]'),
+  btnCloseModal: document.querySelector('[data-modal-close]'),
+  qwerty: document.querySelector('.hero__datalist'),
 };

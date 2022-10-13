@@ -5,7 +5,7 @@ import { cardBuilder } from "../builders/cardBuilder";
 import { randomCardBuilder } from "../builders/cardBuilderRandom";
 import { Notify } from "notiflix";
 import { refs } from '../refs/selectorRefs';
-import { errorMarkup } from "../markups/errorMarkup";
+
 
 
 
@@ -13,7 +13,7 @@ export function findCocktailBySearch(e) {
     e.preventDefault()
     const { searchQuery } = e.target.elements
     const formValue = searchQuery.value.trim().toLowerCase()
-    console.log("🚀 ~ file: searchCocktail.js ~ line 12 ~ findCocktailBySearch ~ formValue", formValue)
+    // console.log("🚀 ~ file: searchCocktail.js ~ line 12 ~ findCocktailBySearch ~ formValue", formValue)
 
     if (formValue.length === 0) {
         Notify.info(`Please, write your cocktail`)
@@ -28,8 +28,6 @@ export function findCocktailBySearch(e) {
         getCocktailsByLetter(formValue)
             .then(cardBuilder)
             .catch(error => {
-                refs.gallery.innerHTML = errorMarkup();
-                Notify.failure(`We haven't that cocktail. Please, write another symbol`)
                 console.log(error);
             })
     } 
@@ -37,8 +35,7 @@ export function findCocktailBySearch(e) {
         getCocktailByWord(formValue)
         .then(cardBuilder)
             .catch(error => {
-                refs.gallery.innerHTML = errorMarkup();
-                Notify.failure(`We haven't that cocktail. Please, check your word`)
+                console.log(error);
             })
     }
    

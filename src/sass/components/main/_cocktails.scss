@@ -22,10 +22,8 @@
 .cocktails__list {
   display: flex;
   flex-wrap: wrap;
-
-  @media screen and (min-width: $min768) {
-    gap: 32px;
-  }
+justify-content: center;
+  gap: 32px;
 }
 
 .cocktails__item {
