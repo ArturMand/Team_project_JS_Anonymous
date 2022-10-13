@@ -17,11 +17,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(-50%, -50%);
-  transition: all 4s cubic-bezier(.4, 0, .2, 1)
-  &--ingr{
-    overflow-y: scroll;
-    max-height: 598px;
-  }
+  transition: all 0s cubic-bezier(.4, 0, .2, 1);
+  
   @media screen and (max-height: 710px) {
     &::after {
       content: '';
@@ -55,6 +52,11 @@
       top: 349px;
       left: 28px;
     }
+  }
+  &--ingr{
+    overflow-y: scroll;
+    max-height: 598px;
+    min-height: 200px;
   }
 }
 
