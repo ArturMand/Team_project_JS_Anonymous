@@ -19,11 +19,4 @@ export function saveIngredient(e) {
         return;
     }
     data.ingredients = e.target.name;
-
-    // const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
-    // if (!parsedArray.includes(e.target.name)) {
-    //     e.target.textContent = 'Add to';
-    //     return;
-    // }
-    // e.target.textContent = 'Remove';  
 };
