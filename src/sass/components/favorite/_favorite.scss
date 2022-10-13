@@ -1,3 +1,37 @@
+.favorite {
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: $min768) {
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $min1280) {
+    padding-top: 52px;
+  }
+}
+
+.favorite__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.91;
+  text-align: center;
+
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $min768) {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.19;
+  }
+
+  @media screen and (min-width: $min1280) {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
 .favorite__text {
   font-weight: 600;
   font-size: 14px;
@@ -23,7 +57,7 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $min768) {
-    padding: 28px;
+    margin-bottom: 28px;
   }
 }
 
@@ -31,6 +65,6 @@
   margin-bottom: 20px;
 
   @media screen and (min-width: $min768) {
-    padding: 28px;
+    margin-bottom: 28px;
   }
 }

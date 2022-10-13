@@ -27,6 +27,10 @@ justify-content: center;
 }
 
 .cocktails__item {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
   width: 100%;
   border: 1px solid $button-orange-bgc;
   border-radius: 4px;
@@ -53,10 +57,15 @@ justify-content: center;
 }
 
 .cocktails__box {
+
   padding-top: 48px;
   padding-left: 21px;
   padding-right: 21px;
   padding-bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (min-width: $min768) {
     padding: 20px;
@@ -72,6 +81,7 @@ justify-content: center;
 .cocktails__title--secondary {
   margin-bottom: 16px;
 
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;

@@ -12,6 +12,7 @@ import { addDatalistSearch } from './js/builders/heroDatalist'
 import { searchByDatalist } from './js/search/searchByDatalist';
 
 import { modalControl } from './js/modal/modal-control';
+import { Navigation } from './js/nav-link/navigation';
 
 mobileMenu();
 startPageBuild();

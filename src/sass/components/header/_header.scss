@@ -52,13 +52,15 @@
 // Navigation
 
 .header__nav {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: $min768) and (max-width: $max1280) {
     margin-top: 90px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    align-items: center;
   }
 
   @media screen and (max-width: $max1280) {
@@ -97,13 +99,14 @@
 }
 
 .header__button {
-  width: 116px;
+  width: 150px;
 
   margin-top: 32px;
   margin-bottom: 12px;
 
   @media screen and (min-width: $min768) and (max-width: $max1280) {
-    margin-right: 40px;
+    margin-left: 57px;
+    justify-content: center;
   }
 
   @media screen and (max-width: $max1280) {
@@ -127,16 +130,27 @@
 }
 
 .header__list {
-  display: flex;
+  display: none;
   flex-direction: column;
 
   width: 214px;
   border: 1px solid $button-orange-bgc;
   border-radius: 4px;
+
+  @media screen and (min-width: $min768) {
+    position: absolute;
+    top: 100%;
+    left: 46%;
+  }
+
+  @media screen and (min-width: $min1280) {
+    top: 85%;
+    left: 113%;
+  }
 }
 
 .header__favorite--link {
-  display: inline-block;
+  display: flex;
   padding: 12px;
   font-weight: 400;
   font-size: 18px;
@@ -224,6 +238,17 @@
 
     @media screen and (min-width: $min768) and (max-width: $max1280) {
       padding: 24px 16px;
+
+      &::after {
+        content: '';
+        margin-top: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: -24px;
+
+        height: 110px;
+        background-color: $button-orange-bgc;
+      }
     }
 
     & .header__form {
