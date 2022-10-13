@@ -1,8 +1,5 @@
-export function createMarkupModalCocktail({
-  strDrinkThumb,
-  strDrink,
-  idDrink,
-}) {
+export function createMarkupModalCocktail({ strDrinkThumb, strDrink,idDrink,strInstructions }) {
+
   return `
   <button class="modal__btn--close" type="button" >
     <svg width="32" height="32" data-modal-close>
@@ -12,9 +9,7 @@ export function createMarkupModalCocktail({
   <h2 class="modal__title">${strDrink}</h2>
         <h3 class="modal__title--secondary">Instractions:</h3>
         <p class="modal__text">
-          Add the gin, Campari and sweet vermouth to a mixing glass filled with
-          ice, and stir until well-chilled. Strain into a rocks glass filled with
-          large ice cubes. Garnish with an orange peel.
+          ${strInstructions}
         </p>
       <img class="modal__img" src="${strDrinkThumb}" alt="${strDrink}" />
  

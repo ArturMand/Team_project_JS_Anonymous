@@ -6,4 +6,5 @@ export function createModal(word) {
     .catch(error => {
       console.log(error);
     });
+    
 }

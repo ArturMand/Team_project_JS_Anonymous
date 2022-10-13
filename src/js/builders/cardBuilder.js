@@ -4,10 +4,8 @@ import { errorMarkup } from '../markups/errorMarkup';
 import { Notify } from 'notiflix';
 
 export function cardBuilder(cocktail) {
-  console.log(cocktail.drinks);
   if (cocktail.drinks === null) {
     Notify.failure(`We haven't cocktail, which begin with that symbol`);
-    console.log(refs.cockTitle.classList);
     refs.cockTitle.classList.add('js_hidden_picture')
     refs.gallery.innerHTML = errorMarkup
     return
