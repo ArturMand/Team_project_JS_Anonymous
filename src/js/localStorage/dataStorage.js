@@ -3,8 +3,8 @@ export const INGREDIENTS_KEY = 'favorite-ingredients';
 import { saveData, saveDataIngr } from './saveStorage';
 JSON.parse(localStorage.getItem(FAVORITE_KEY));
 export const data = {
-  _cocktails: null ? [] : JSON.parse(localStorage.getItem(FAVORITE_KEY)),
-  _ingredients: null ? [] : JSON.parse(localStorage.getItem(FAVORITE_KEY)),
+  _cocktails:  JSON.parse(localStorage.getItem(FAVORITE_KEY))|| [],
+  _ingredients:  JSON.parse(localStorage.getItem(FAVORITE_KEY))|| [],
 
   get cocktails() {
     return this._cocktails;
