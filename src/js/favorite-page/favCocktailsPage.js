@@ -3,6 +3,7 @@ import { FAVORITE_KEY } from '../localStorage/dataStorage';
 import { getInfo } from '../fetch/fetchCocktailInformation';
 import { createMarkup } from '../markups/createMarkup';
 import { btnIcon } from '../markups/createMarkup';
+import { errorMarkup } from "../markups/errorMarkup";
 
 export async function pageFavCocktails() {
     const parsedArray = JSON.parse(localStorage.getItem(FAVORITE_KEY));
