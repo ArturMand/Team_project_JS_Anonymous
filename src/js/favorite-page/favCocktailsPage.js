@@ -6,6 +6,9 @@ import { btnIcon } from '../markups/createMarkup';
 
 export async function pageFavCocktails() {
     const parsedArray = JSON.parse(localStorage.getItem(FAVORITE_KEY));
+    if(parsedArray === null) {
+      return errorMarkup()
+     }
     if (parsedArray.length === 0) {
       refs.textFavPageCockt.textContent = 'No cocktails added yet!';
       return;

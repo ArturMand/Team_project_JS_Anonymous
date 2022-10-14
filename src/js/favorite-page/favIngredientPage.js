@@ -3,9 +3,12 @@ import { INGREDIENTS_KEY } from '../localStorage/dataStorage';
 import { getIngridient } from '../fetch/fetchIngridientByName';
 import { createMarkupIngr } from '../markups/createMarkupIngr';
 import { btnIcon } from '../markups/createMarkup';
+import { errorMarkup } from "../markups/errorMarkup";
 export async function pageFavIngredients() {
     const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
-    if(parsedArray === null) return
+    if(parsedArray === null) {
+     return errorMarkup()
+    }
     if (parsedArray.length === 0) {
       refs.textFavPageIngr.textContent = 'No ingredients added yet!';
       return;
