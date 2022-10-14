@@ -7,7 +7,8 @@ import { errorMarkup } from "../markups/errorMarkup";
 export async function pageFavIngredients() {
     const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
     if(parsedArray === null) {
-     return errorMarkup()
+      errorMarkup()
+      return
     }
     if (parsedArray.length === 0) {
       refs.textFavPageIngr.textContent = 'No ingredients added yet!';
