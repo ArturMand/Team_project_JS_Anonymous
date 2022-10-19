@@ -8,7 +8,7 @@ export function createMarkupIngredient(data) {
     }
     return ingredients
       .map(ingredient => {
-        return  `<li class='modal__item'><button class="modal__link"name="${ingredient}" data-modal-ingredient type='button'>${ingredient}</button></li>`;
+        return  `<li class='modal__item modal__item--hover'><button class="modal__link"name="${ingredient}" data-modal-ingredient type='button'>${ingredient}</button></li>`;
       })
       .join('');
 }
