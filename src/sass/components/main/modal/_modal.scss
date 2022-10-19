@@ -45,7 +45,6 @@
     @media screen and (min-width: $min768) {
       margin-left: 292px;
     }
-
   }
   &__container {
     @media screen and (min-width: $min768) {
@@ -194,19 +193,22 @@
   line-height: 1.62;
 
   color: $main-color;
+
   &:hover,
   &:focus {
     color: $button-orange-bgc;
+    cursor: pointer;
   }
+
   &::before {
     content: '\2736';
     margin-right: 10px;
 
     color: inherit;
   }
+
   @media screen and (max-width: $max768) {
     padding: 5px 0;
-
   }
 }
 
@@ -216,9 +218,11 @@
   line-height: 1.62;
 
   color: $secondary-color-text;
+
   &:hover,
   &:focus {
     color: $button-orange-bgc;
+    cursor: pointer;
   }
 }
 
