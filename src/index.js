@@ -13,6 +13,7 @@ import { searchByDatalist } from './js/search/searchByDatalist';
 
 import { modalControl } from './js/modal/modal-control';
 import { Navigation } from './js/nav-link/navigation';
+import { Theme } from "./js/theme/theme";
 
 mobileMenu();
 startPageBuild();

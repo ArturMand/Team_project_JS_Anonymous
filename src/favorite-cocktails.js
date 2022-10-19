@@ -8,6 +8,7 @@ import { openModal } from './js/modal/modal';
 import { Navigation } from './js/nav-link/navigation';
 import { pageFavCocktails } from './js/favorite-page/favCocktailsPage';
 import { removeFav } from './js/favorite-page/removeFromFav';
+import { Theme } from "./js/theme/theme";
 
 mobileMenu();
 pageFavCocktails();

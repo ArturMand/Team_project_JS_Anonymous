@@ -7,6 +7,7 @@ import { openModal } from './js/modal/modal';
 import { Navigation } from './js/nav-link/navigation';
 import { pageFavIngredients } from './js/favorite-page/favIngredientPage';
 import { removeFav } from './js/favorite-page/removeFromFavIngr';
+import { Theme } from "./js/theme/theme";
 
 mobileMenu();
 pageFavIngredients();
