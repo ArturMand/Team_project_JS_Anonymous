@@ -8,6 +8,8 @@ body {
   font-style: normal;
 
   color: $main-color;
+  background-color: $white-color;
+
   &.active {
     overflow: hidden;
   }
@@ -104,16 +106,11 @@ p {
   color: $white-color;
   background-color: $button-light-orange-bgc;
 
-  // &:focus,
   &:hover {
     background-color: $white-color;
     color: $button-orange-bgc;
 
     cursor: pointer;
-  }
-
-  &:active {
-    background-color: $button-orange-bgc;
   }
 }
 
@@ -126,18 +123,11 @@ p {
   color: $button-light-orange-bgc;
   background-color: $white-color;
 
-  // &:focus,
   &:hover {
     border: 2px solid $button-orange-bgc;
-
-    background-color: $color-light-text;
-    color: $button-orange-bgc;
+    background-color: $button-orange-bgc;
+    color: $color-light-text;
 
     cursor: pointer;
-  }
-
-  &:active {
-    border: 1px solid $button-orange-bgc;
-    background-color: $white-color;
   }
 }

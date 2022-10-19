@@ -4,6 +4,7 @@ import { refs } from './js/refs/selectorRefs';
 import { openModal } from './js/modal/modal';
 import { pageFavCocktails } from './js/favorite-page/favCocktailsPage';
 import { removeFav } from './js/favorite-page/removeFromFav';
+import { Theme } from "./js/theme/theme";
 import { saveCocktail } from './js/localStorage/getId';
 import { modalControl } from './js/modal/modal-control';
 import { modalIngrConrol } from './js/modal/modal-Ingr-conrol';
