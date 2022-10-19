@@ -2,9 +2,14 @@ import { refs } from "../refs/selectorRefs";
 import { INGREDIENTS_KEY } from '../localStorage/dataStorage';
 import { getIngridient } from '../fetch/fetchIngridientByName';
 import { createMarkupIngr } from '../markups/createMarkupIngr';
-
+import { btnIcon } from '../markups/createMarkup';
+import { errorMarkup } from "../markups/errorMarkup";
 export async function pageFavIngredients() {
     const parsedArray = JSON.parse(localStorage.getItem(INGREDIENTS_KEY));
+    if(parsedArray === null) {
+      errorMarkup()
+      return
+    }
     if (parsedArray.length === 0) {
       refs.textFavPageIngr.textContent = 'No ingredients added yet!';
       return;
@@ -23,6 +28,6 @@ export async function pageFavIngredients() {
 
   const arrBtnAddTo = document.querySelectorAll('button[data-ingredient]');
   arrBtnAddTo.forEach(element => {
-        element.textContent = 'Remove';
+        element.innerHTML = `Remove ${btnIcon.outerHTML}`;
   });
 };

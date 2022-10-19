@@ -17,8 +17,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(-50%, -50%);
-  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: all 0s cubic-bezier(.4, 0, .2, 1);
+  
   @media screen and (max-height: 710px) {
     &::after {
       content: '';
@@ -52,6 +52,11 @@
       top: 349px;
       left: 28px;
     }
+  }
+  &--ingr{
+    overflow-y: scroll;
+    max-height: 598px;
+    min-height: 200px;
   }
 }
 
@@ -243,5 +248,9 @@
     bottom: 28px;
     right: 28px;
     margin: 0;
+  }
+  &--ingr{
+    position: static;
+    margin-left: auto;
   }
 }
