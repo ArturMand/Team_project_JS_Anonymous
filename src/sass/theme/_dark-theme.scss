@@ -94,6 +94,7 @@ body.theme__dark {
 
     &:focus,
     &:hover {
+      background-color: $button-orange-bgc;
       color: $main-color;
 
       & ~ .datalist__icon {
@@ -122,6 +123,16 @@ body.theme__dark {
     background-color: $main-color;
   }
 
+  & .modal__btn--close {
+    fill: $color-light-text;
+
+    &:hover,
+    &:focus {
+      fill: $button-orange-bgc;
+      cursor: pointer;
+    }
+  }
+
   & .modal__text {
     color: $color-light-text;
 
@@ -132,6 +143,16 @@ body.theme__dark {
 
   & .modal__item {
     color: $color-light-text;
+
+    &--hover {
+      &:hover {
+        color: $button-orange-bgc;
+
+        & .modal__link {
+          color: $button-orange-bgc;
+        }
+      }
+    }
   }
 
   & .modal__link {

@@ -17,8 +17,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translate(-50%, -50%);
-  transition: all 0s cubic-bezier(.4, 0, .2, 1);
-  
+  transition: all 0s cubic-bezier(0.4, 0, 0.2, 1);
+
   @media screen and (max-height: 710px) {
     &::after {
       content: '';
@@ -53,7 +53,7 @@
       left: 28px;
     }
   }
-  &--ingr{
+  &--ingr {
     overflow-y: scroll;
     max-height: 598px;
     min-height: 200px;
@@ -199,10 +199,16 @@
 
   color: $main-color;
 
-  &:hover,
-  &:focus {
-    color: $button-orange-bgc;
-    cursor: pointer;
+  &--hover {
+    &:hover,
+    &:focus {
+      color: $button-orange-bgc;
+
+      & .modal__link {
+        color: $button-orange-bgc;
+        cursor: pointer;
+      }
+    }
   }
 
   &::before {
@@ -223,12 +229,6 @@
   line-height: 1.62;
 
   color: $secondary-color-text;
-
-  &:hover,
-  &:focus {
-    color: $button-orange-bgc;
-    cursor: pointer;
-  }
 }
 
 .modal__btn {
@@ -249,7 +249,7 @@
     right: 28px;
     margin: 0;
   }
-  &--ingr{
+  &--ingr {
     position: static;
     margin-left: auto;
   }
