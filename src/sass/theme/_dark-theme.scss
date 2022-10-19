@@ -1,0 +1,144 @@
+body.theme__dark {
+  color: $color-light-text;
+  background-color: $main-color;
+
+  & .btn--orange:hover {
+    background-color: $main-color;
+  }
+
+  & .btn--white {
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $button-orange-bgc;
+      color: $main-color;
+    }
+  }
+
+  & .theme__text--light {
+    color: $color-light-text;
+  }
+
+  & .theme__text--dark {
+    color: $button-orange-bgc;
+  }
+
+  & .header__input {
+    background-color: $main-color;
+    color: $color-light-text;
+  }
+
+  & .nav__link {
+    color: $color-light-text;
+
+    &:hover,
+    &:focus {
+      color: $button-orange-bgc;
+    }
+  }
+
+  & .header__button--more {
+    fill: $color-light-text;
+  }
+
+  & .header__list {
+    background-color: $main-color;
+  }
+
+  & .header__favorite--link {
+    color: $color-light-text;
+
+    &:focus,
+    &:hover {
+      color: $color-light-text;
+    }
+  }
+
+  & .menu__btn {
+    fill: $color-light-text;
+  }
+
+  & .mobile-menu__container.is-open {
+    background-color: $main-color;
+  }
+
+  & .cocktails__svg {
+    fill: $main-color;
+  }
+
+  & .hero__text {
+    color: $color-light-text;
+  }
+
+  & .hero__list {
+    background-color: $main-color;
+  }
+
+  & .hero__btn {
+    background-color: $main-color;
+
+    &:focus,
+    &:hover {
+      -webkit-text-stroke: 1px $color-light-text;
+
+      text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    }
+
+    &:checked {
+      color: $color-light-text;
+    }
+  }
+
+  & .hero__input {
+    background-color: $main-color;
+
+    &:focus,
+    &:hover {
+      color: $main-color;
+
+      & ~ .datalist__icon {
+        fill: $main-color;
+      }
+    }
+  }
+
+  & .hero__datalist {
+    background-color: $main-color;
+  }
+
+  & .hero__option {
+    &:focus,
+    &:hover,
+    .active {
+      color: $main-color;
+    }
+  }
+
+  & .modal {
+    box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.12),
+      0px 1px 1px rgba(255, 255, 255, 0.14),
+      0px 2px 1px rgba(255, 255, 255, 0.2);
+
+    background-color: $main-color;
+  }
+
+  & .modal__text {
+    color: $color-light-text;
+
+    &--bold {
+      color: $color-light-text;
+    }
+  }
+
+  & .modal__item {
+    color: $color-light-text;
+  }
+
+  & .modal__link {
+    color: $color-light-text;
+  }
+
+  & .favorite__text {
+    color: $color-light-text;
+  }
+}
